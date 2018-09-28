@@ -1,0 +1,58 @@
+class Employee:
+    'Common base class for all employees'  # Class description
+    annraise = 1.04
+    emp_numb = 0
+
+    def __init__(self, fname, lname, pay):
+        self.fname = fname
+        self.lname = lname
+        self.pay = pay
+        self.email = fname + "." + lname + "@company.com"
+
+        Employee.emp_numb += 1
+
+    def fullname(self):
+        return '{},{}'.format(self.fname, self.lname)
+
+    def applyraise(self):
+        self.pay = int(self.pay * self.annraise)
+
+    @classmethod
+    def apply_raise_amt(cls, amount):
+        pass
+    @classmethod
+    def from_string(cls, iString):
+        x, y, z = iString.split('-')
+        return cls(x, y, z)
+
+class Developer(Employee):
+    def __init__(self, fname, lname, pay, Lang):
+        super().__init__(fname, lname, pay)
+        self.pLang = Lang
+
+employee1 = Employee("Akshay", "Kamat", 1000000)
+print(Employee.__dict__)
+print(employee1.__dict__)
+print(employee1.email)
+employee2 = Employee("Aditi", "Kamat", 2000000)
+print(employee1.fullname())
+employee1.applyraise()
+print(employee1.pay)
+print("Total Employees:  " + str(Employee.emp_numb))
+employee3 =Employee.from_string('Ash-kamat-1000000')
+
+developer1 = Developer("XXX","YYY","ZZZ","C#")
+
+'print(help(Developer))'
+'print(developer1.pLang)'
+'print(developer1.email)'
+""
+print(Employee.__doc__)
+print(Employee.__module__)
+print(Employee.__name__)
+print(Employee.__dict__)
+print(isinstance(employee3,Employee))
+print(Employee.__repr__(employee3))
+
+'Creatting a LIST'
+Empl_List = [employee1,employee2,employee3]

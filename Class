@@ -1,0 +1,28 @@
+class Car:
+    'A simple Car Class'
+
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.fuel_capacity = 15
+        self.fuel_level = 0
+
+    def fill_tank(self):
+        self.fuel_level = self.fuel_capacity
+        print("Fuel tank is full")
+
+    def driving(self):
+        print("The car is driving")
+
+    def update_fuel_level(self, fuel):
+        if self.fuel_level + fuel > self.fuel_capacity:
+            print("Cannot hold that much fuel")
+        else:
+            self.fuel_level = self.fuel_level + fuel
+
+car_1 = Car("Toyota", "Camry", 2015)
+print(car_1.fuel_level)
+car_1.fill_tank()
+car_1.driving()
+car_1.update_fuel_level(4)

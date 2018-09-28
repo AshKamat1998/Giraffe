@@ -1,0 +1,26 @@
+"""
+try:
+    res = int(input("Enter a number:"))
+    print(res)
+except ValueError as err:
+    print(err)
+
+'open("C:\Python Test Files\FamMemb.txt","r")
+open("C:\Python Test Files\FamMemb.txt","w")
+"""
+FamFile = open("C:\Python Test Files\FamMemb.txt" , "a")
+
+FamFile.write("Neeta Palekar")
+FamFile.close()
+"""
+print(FamFile.readable())
+'print(FamFile.readline())
+'print(FamFile.readline())
+print(FamFile.readline())
+MembList = (FamFile.readlines())
+print(MembList)
+print(FamFile.readlines())
+AddMemb="Neeta "
+FamFile.write()
+FamFile.close()
+"""

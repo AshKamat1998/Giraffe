@@ -1,0 +1,6 @@
+import pandas as pd
+fname = "C:\Python Test Files\Weather_Data.csv"
+df = pd.read_csv(fname)
+print(df)
+print(df['Temperature'].max())
+df['EST'](df['Events'] == 'Rain')
