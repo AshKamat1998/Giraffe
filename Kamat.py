@@ -23,5 +23,5 @@ def addNum(a: int, b: int):
     return a+b
 print(addNum("a",6))
 """
-stringVariable= "Akshay Kamat"
+stringVariable= "Akshay Ashutosh Kamat"
 print(stringVariable.isalpha())
